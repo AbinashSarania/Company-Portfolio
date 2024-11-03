@@ -25,11 +25,11 @@ const processes = [
   {
     id: 3,
     title: "Our Process 03",
-    steps: [{ title: "Planning", text: "Strategy" }],
+    steps: [{ title: "Execution", text: "Implementation" }],
     description: [
-      "Our planning phase involves setting clear goals and objectives for your project.",
-      "We create a detailed roadmap that outlines the steps necessary to achieve your vision.",
-      "Our strategy ensures that every aspect of the project aligns with your overall business goals.",
+      "In this phase, we bring the strategy and plans to life through careful execution.",
+      "Our team works on implementing the roadmap and ensuring every component of the project is developed and deployed effectively.",
+      "This stage focuses on delivering a polished, functional solution that meets all defined objectives and aligns with your business goals.",
     ],
   },
   // Add more processes as needed

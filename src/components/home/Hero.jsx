@@ -1,12 +1,12 @@
 // src/components/Hero.jsx
 import React from "react";
-import HeroImage from "../../assets/HeroImage.png"; // Adjust the path if necessary
+import HeroImage from "../../assets/HeroImage.png";
 
-export default function Hero() {
+export default function Hero({ scrollToOurTeam }) {
   return (
     <section
       className="relative flex flex-col items-center justify-start bg-white pb-20"
-      style={{ minHeight: "80vh" }} // Sets the height to 80vh
+      style={{ minHeight: "80vh" }}
     >
       {/* Content Container */}
       <div className="w-full text-center relative z-10">
@@ -29,24 +29,23 @@ export default function Hero() {
         </div>
 
         {/* Call-to-Action Button */}
-        <a
-          href="#pricing"
-          className="px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300 mb-8 inline-block"
+        <button
+          onClick={scrollToOurTeam}
+          className="px-9 py-3 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300 mb-8 inline-block"
           style={{ fontFamily: "Anonymous Pro" }}
         >
-          Check out our pricing
-        </a>
+          Know more about us
+        </button>
       </div>
 
       {/* Image Container */}
       <div className="w-full flex justify-end pr-8">
-  <img
-    src={HeroImage}
-    alt="Hero"
-    className="w-[60%] max-w-[1060px] h-auto sm:w-[50%] md:w-[50%] lg:w-[50%] xl:w-[57.4%]"
-  />
-</div>
-
+        <img
+          src={HeroImage}
+          alt="Hero"
+          className="w-[60%] max-w-[1060px] h-auto sm:w-[50%] md:w-[50%] lg:w-[50%] xl:w-[57.4%]"
+        />
+      </div>
     </section>
   );
 }
