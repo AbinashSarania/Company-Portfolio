@@ -6,7 +6,7 @@ export default function Navbar({ scrollToContact }) {
   return (
     <nav className="flex items-center justify-between p-4 bg-white shadow-md">
       {/* Brand name */}
-      <div className="text-lg font-bold">Design Lab</div>
+      <div className="text-lg font-bold">Design Labs</div>
 
       {/* Call-to-action button */}
       <button
