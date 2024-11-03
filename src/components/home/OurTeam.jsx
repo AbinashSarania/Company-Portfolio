@@ -3,7 +3,7 @@ import React from "react";
 const teamMembers = [
   {
     role: "UI/UX Designer",
-    name: "Suresh Mondal",
+    name: "Samesh Mondal",
   },
   {
     role: "Frontend Developer",
