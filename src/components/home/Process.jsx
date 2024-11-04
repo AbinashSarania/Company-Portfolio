@@ -32,55 +32,52 @@ const processes = [
       "This stage focuses on delivering a polished, functional solution that meets all defined objectives and aligns with your business goals.",
     ],
   },
-  // Add more processes as needed
 ];
 
 const Process = () => {
   return (
     <div
-      className="relative w-full min-h-screen py-20 px-6 md:px-12 lg:px-24 overflow-hidden bg-black text-white flex flex-col items-center justify-center"
+      className="relative w-full max-w-full min-h-screen py-20 px-6 md:px-12 lg:px-24 overflow-hidden bg-black text-white flex flex-col items-center justify-center"
       style={{ fontFamily: "Anybody" }}
     >
-      {processes.map((process, index) => (
+      {processes.map((process) => (
         <div
           key={process.id}
-          className="w-full flex flex-col md:flex-row items-center justify-center px-10 py-10 my-10"
+          className="w-full max-w-7xl overflow-x-auto flex flex-col md:flex-row items-center justify-center px-10 py-10 my-10"
         >
           {/* Left Section */}
           <div className="flex flex-col items-start justify-center gap-10 w-full md:w-1/2">
-            <div className="text-xl font-light">{process.title}</div>
-            <div className="flex flex-col items-start justify-center gap-6 text-4xl">
+            <div className="text-lg md:text-xl font-light">{process.title}</div>
+            <div className="flex flex-col items-start justify-center gap-4 md:gap-6 text-2xl md:text-4xl">
               {process.steps.map((step, stepIndex) => (
                 <div
                   key={stepIndex}
-                  className={`text-${
-                    stepIndex === 0 ? "3xl text-blue-600" : "5xl"
+                  className={`${
+                    stepIndex === 0 ? "text-blue-600 text-xl md:text-3xl" : "text-3xl md:text-5xl"
                   } font-normal`}
                 >
                   {step.title}
-                  <h1 className="text-5xl font-normal text-gainsboro-200 mt-8">
+                  <h1 className="text-xl md:text-5xl font-normal text-gray-300 mt-4 md:mt-8">
                     {step.text}
                   </h1>
                 </div>
               ))}
             </div>
-            <div className="flex items-center mt-10">
+            <div className="flex items-center mt-6 md:mt-10">
               <div className="w-4 h-4 flex items-center justify-center rounded-full bg-white text-black">
                 <FaArrowRight size={10} />
               </div>
-              <div className="ml-4 text-base">Keep scrolling</div>
+              <div className="ml-2 md:ml-4 text-sm md:text-base">Keep scrolling</div>
             </div>
           </div>
 
           {/* Right Section */}
-          <div className="w-full md:w-1/2 flex flex-col items-start justify-center gap-6 mt-10 md:mt-0">
+          <div className="w-full md:w-1/2 flex flex-col items-start justify-center gap-4 md:gap-6 mt-8 md:mt-0">
             {process.description.map((desc, descIndex) => (
               <div
                 key={descIndex}
-                className={`text-lg leading-[31px] ${
-                  descIndex === process.description.length - 1
-                    ? "text-gray-500"
-                    : ""
+                className={`text-sm md:text-lg leading-[24px] md:leading-[31px] ${
+                  descIndex === process.description.length - 1 ? "text-gray-500" : ""
                 }`}
               >
                 {desc}

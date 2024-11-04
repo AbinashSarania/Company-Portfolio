@@ -19,7 +19,7 @@ const App = () => {
   const scrollToOurTeam = () => ourTeamRef.current?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="App">
+    <div className="App overflow-x-hidden">
       {/* Pass the scroll functions as props */}
       <Navbar scrollToContact={scrollToContact} />
       <Hero scrollToOurTeam={scrollToOurTeam} />
