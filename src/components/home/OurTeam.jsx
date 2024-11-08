@@ -2,6 +2,10 @@ import React from "react";
 
 const teamMembers = [
   {
+    role: "Manager",
+    name: "Guljar Ali",
+  },
+  {
     role: "UI/UX Designer",
     name: "Samesh Mondal",
   },
@@ -28,7 +32,7 @@ const OurTeam = () => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="grid grid-cols-[350px,1fr] gap-4 text-sm"
+            className="grid grid-cols-[150px,1fr] sm:grid-cols-[350px,1fr] gap-4 text-sm"
             style={{ fontFamily: "Anybody" }}
           >
             <div className="font-light text-left">{member.role}:</div>
@@ -37,12 +41,12 @@ const OurTeam = () => {
         ))}
       </div>
       <div className="flex flex-col md:flex-row items-center md:items-start mt-8 space-y-4 md:space-y-0 md:space-x-6">
-        <button
+        {/* <button
           className="bg-white hover:bg-gray-200 text-black font-bold py-2 px-28 rounded"
           style={{ fontFamily: "Anonymous Pro" }}
         >
-          Check out our pricing
-        </button>
+          Contact Us
+        </button> */}
         <p
           className="text-xs text-white max-w-xl font-extralight"
           style={{ fontFamily: "Anybody" }}

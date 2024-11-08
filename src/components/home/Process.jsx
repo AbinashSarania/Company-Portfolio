@@ -37,7 +37,7 @@ const processes = [
 const Process = () => {
   return (
     <div
-      className="relative w-full max-w-full min-h-screen py-20 px-6 md:px-12 lg:px-24 overflow-hidden bg-black text-white flex flex-col items-center justify-center"
+      className="relative w-full max-w-full min-h-screen py-20 px-2 md:px-12 lg:px-24 overflow-hidden bg-black text-white flex flex-col items-center justify-center"
       style={{ fontFamily: "Anybody" }}
     >
       {processes.map((process) => (
