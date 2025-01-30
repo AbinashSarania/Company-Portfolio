@@ -5,6 +5,7 @@ import Project3 from "../../assets/Project (3).png";
 import Project4 from "../../assets/Project (4).png";
 import Project5 from "../../assets/Project (5).png";
 import Project6 from "../../assets/Project (6).png";
+import Project7 from "../../assets/Project (7).png";
 
 const projects = [
   {
@@ -51,6 +52,7 @@ const projects = [
     imgSrc: Project4,
     link: "https://www.thefreightsolutions.com/",
   },
+  
   {
     id: 5,
     year: 2024,
@@ -72,6 +74,17 @@ const projects = [
     location: "Bengaluru, India",
     imgSrc: Project6,
     link: "https://tree7designs.com/",
+  },
+  {
+    id: 7,
+    year: 2025,
+    title: "RMC Bongaigaon",
+    description:
+      "The RMC Bongaigaon website highlights its dedication to delivering high-quality ready-mix concrete solutions through precision, reliability, and collaboration, ensuring customer satisfaction and transparency in every project.",
+    type: "Portfolio and Service Website",
+    location: "Bongaigaon, India",
+    imgSrc: Project7,
+    link: "https://rmcbongaigaon.in/",
   },
 ];
 
