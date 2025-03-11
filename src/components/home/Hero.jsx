@@ -4,46 +4,40 @@ import HeroImage from "../../assets/HeroImage.png";
 
 export default function Hero({ scrollToOurTeam }) {
   return (
-    <section
-      className="relative flex flex-col items-center justify-start bg-white pb-20"
-      style={{ minHeight: "80vh" }}
-    >
+    <section className="relative flex flex-col items-start justify-start bg-black text-white min-h-screen ">
       {/* Content Container */}
-      <div className="w-full text-center relative z-10">
-        {/* Primary Heading */}
-        <h1
-          className="text-6xl md:text-8xl mb-4 mt-8"
-          style={{ color: "#EBDEDE", fontFamily: "Anybody" }}
-        >
-          Rebel against Boring
-        </h1>
-
-        {/* Secondary Heading */}
-        <div className="overflow-hidden whitespace-nowrap text-xl md:text-8xl mb-8 mt-12">
+      <div className="w-full text-left relative z-10 pb-6">
+        {/* Secondary Heading with Animation */}
+        <div className="overflow-hidden whitespace-nowrap text-[5rem] md:text-[14rem] ">
           <p
             className="animate-scroll whitespace-nowrap"
-            style={{ color: "black", fontFamily: "Anybody" }}
-          >
-            Communication. Brand. Contents. User Experience
+            style={{ fontFamily: "Anybody" }}>
+            We Grow Brands Online
           </p>
         </div>
 
-        {/* Call-to-Action Button */}
+        {/* Primary Heading (Smaller & Left-Aligned) */}
+        <h1
+          className="text-md md:text-xl mb-4 px-8"
+          style={{ color: "#EBDEDE", fontFamily: "Anybody" }}>
+          Custom Websites, Branding & Digital Marketing
+        </h1>
+
+        {/* Call-to-Action Button (Left-Aligned with Padding) */}
         <button
           onClick={scrollToOurTeam}
-          className="px-9 py-3 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300 mb-8 inline-block"
-          style={{ fontFamily: "Anonymous Pro" }}
-        >
-          Know more about us
+          className="px-9 py-3 text-lg font-semibold text-white bg-blue-800 rounded-lg hover:bg-blue-600 transition duration-300 ml-8"
+          style={{ fontFamily: "Anonymous Pro" }}>
+          Request a quote!
         </button>
       </div>
 
-      {/* Image Container */}
-      <div className="w-full flex justify-end pr-8">
+      {/* Image Container (Takes Full Remaining Space) */}
+      <div className="w-full flex-grow flex justify-center items-center">
         <img
           src={HeroImage}
           alt="Hero"
-          className="w-[60%] max-w-[1060px] h-auto sm:w-[50%] md:w-[50%] lg:w-[50%] xl:w-[57.4%]"
+          className="w-full h-full object-cover"
         />
       </div>
     </section>
