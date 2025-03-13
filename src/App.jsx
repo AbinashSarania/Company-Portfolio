@@ -15,16 +15,20 @@ const App = () => {
   const ourTeamRef = useRef(null);
 
   // Scroll functions
-  const scrollToContact = () => contactRef.current?.scrollIntoView({ behavior: "smooth" });
-  const scrollToOurTeam = () => ourTeamRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToContact = () =>
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToOurTeam = () =>
+    ourTeamRef.current?.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div className="App overflow-x-hidden">
       {/* Pass the scroll functions as props */}
       <Navbar scrollToContact={scrollToContact} />
       <Hero scrollToOurTeam={scrollToOurTeam} />
-      <Process />
+
       <Works />
+      <Process />
+
       <div ref={ourTeamRef}>
         <OurTeam />
       </div>
@@ -32,7 +36,6 @@ const App = () => {
         <ContactUs />
       </div>
       <WhatsAppButton />
-      <Banner />
     </div>
   );
 };
