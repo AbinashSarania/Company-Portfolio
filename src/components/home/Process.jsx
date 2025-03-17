@@ -1,92 +1,75 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import ApproachImage from "../../assets/Our approach.png"; // Replace with your actual image path
+import OverlapImage from "../../assets/Vector.png"; // Replace with the transparent PNG image you want to overlap
 
 const processes = [
   {
     id: 1,
-    title: "Our Process 01",
-    steps: [{ title: "Discovery", text: "Research" }],
+    title: "User-Centered Design",
     description: [
-      "During this discovery phase, our team starts a thorough research and analysis to understand your project in detail.",
-      "We employ numerous research methods to uncover valuable insights about your competitors and target audience.",
-      "This process allows us to gather data that informs our design and development decisions, ensuring our methods and solutions are aligned with your business objectives.",
+      "At UXify, we design with users in mind, ensuring intuitive, accessible, and seamless experiences. Our designs are visually engaging, responsive across all devices, and backed by data-driven insights. We create interfaces that enhance interaction, usability, and business success.",
     ],
   },
   {
     id: 2,
-    title: "Our Process 02",
-    steps: [{ title: "Planning", text: "Strategy" }],
+    title: "Industry-Standard Compliance",
     description: [
-      "Our planning phase involves setting clear goals and objectives for your project.",
-      "We create a detailed roadmap that outlines the steps necessary to achieve your vision.",
-      "Our strategy ensures that every aspect of the project aligns with your overall business goals.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Our Process 03",
-    steps: [{ title: "Execution", text: "Implementation" }],
-    description: [
-      "In this phase, we bring the strategy and plans to life through careful execution.",
-      "Our team works on implementing the roadmap and ensuring every component of the project is developed and deployed effectively.",
-      "This stage focuses on delivering a polished, functional solution that meets all defined objectives and aligns with your business goals.",
+      "We follow the latest web standards to ensure fast, secure, and SEO-friendly websites. Our solutions are scalable, maintainable, and optimized for performance and cross-browser compatibility. With a strong focus on security and privacy, we build trust-driven digital experiences.",
     ],
   },
 ];
 
 const Process = () => {
   return (
-    <div
-      className="relative w-full max-w-full min-h-screen py-20 px-2 md:px-12 lg:px-24 overflow-hidden bg-black text-white flex flex-col items-center justify-center"
-      style={{ fontFamily: "Anybody" }}
-    >
-      {processes.map((process) => (
-        <div
-          key={process.id}
-          className="w-full max-w-7xl overflow-x-auto flex flex-col md:flex-row items-center justify-center px-10 py-10 my-10"
-        >
-          {/* Left Section */}
-          <div className="flex flex-col items-start justify-center gap-10 w-full md:w-1/2">
-            <div className="text-lg md:text-xl font-light">{process.title}</div>
-            <div className="flex flex-col items-start justify-center gap-4 md:gap-6 text-2xl md:text-4xl">
-              {process.steps.map((step, stepIndex) => (
-                <div
-                  key={stepIndex}
-                  className={`${
-                    stepIndex === 0 ? "text-blue-600 text-xl md:text-3xl" : "text-3xl md:text-5xl"
-                  } font-normal`}
-                >
-                  {step.title}
-                  <h1 className="text-xl md:text-5xl font-normal text-gray-300 mt-4 md:mt-8">
-                    {step.text}
-                  </h1>
-                </div>
+    <>
+      {/* Text Content */}
+      <div
+        className="relative w-full py-12 md:py-24 px-6 md:px-12 lg:px-12 bg-white text-black flex flex-col justify-center"
+        style={{ fontFamily: "Anybody" }}>
+        
+        {/* Section Heading */}
+        <div className="w-full max-w-7xl mb-10">
+          <h2 className="text-2xl md:text-3xl tracking-tight">Our approach</h2>
+        </div>
+
+        {/* Process List */}
+        {processes.map((process) => (
+          <div
+            key={process.id}
+            className="w-full max-w-7xl flex flex-row items-start justify-start gap-6 md:gap-12 px-0 py-4 my-4">
+            
+            {/* Title on the Left */}
+            <div className="w-1/4 text-sm md:text-sm font-medium">
+              {process.title}
+            </div>
+
+            {/* Description on the Right */}
+            <div className="w-3/4 text-xs md:text-xs leading-[20px] md:leading-[24px] text-gray-600">
+              {process.description.map((desc, descIndex) => (
+                <p key={descIndex} className="mb-2">{desc}</p>
               ))}
             </div>
-            <div className="flex items-center mt-6 md:mt-10">
-              <div className="w-4 h-4 flex items-center justify-center rounded-full bg-white text-black">
-                <FaArrowRight size={10} />
-              </div>
-              <div className="ml-2 md:ml-4 text-sm md:text-base">Keep scrolling</div>
-            </div>
           </div>
+        ))}
+      </div>
 
-          {/* Right Section */}
-          <div className="w-full md:w-1/2 flex flex-col items-start justify-center gap-4 md:gap-6 mt-8 md:mt-0">
-            {process.description.map((desc, descIndex) => (
-              <div
-                key={descIndex}
-                className={`text-sm md:text-lg leading-[24px] md:leading-[31px] ${
-                  descIndex === process.description.length - 1 ? "text-gray-500" : ""
-                }`}
-              >
-                {desc}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
+      {/* Full-Width Approach Image with Overlapping Element */}
+      <div className="relative w-full">
+        {/* Overlapping Image on the Left */}
+        <img
+          src={OverlapImage}
+          alt="Overlay Design"
+          className="absolute left-10 bottom-10 w-1/3 md:w-1/4 h-auto object-contain"
+        />
+
+        {/* Main Approach Image */}
+        <img
+          src={ApproachImage}
+          alt="Our Approach"
+          className="w-screen h-auto object-cover"
+        />
+      </div>
+    </>
   );
 };
 

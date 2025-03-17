@@ -29,9 +29,6 @@ const App = () => {
       <Works />
       <Process />
 
-      <div ref={ourTeamRef}>
-        <OurTeam />
-      </div>
       <div ref={contactRef}>
         <ContactUs />
       </div>
