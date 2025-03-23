@@ -26,7 +26,6 @@ const Process = () => {
       <div
         className="relative w-full py-12 md:py-24 px-6 md:px-12 lg:px-12 bg-white text-black flex flex-col justify-center"
         style={{ fontFamily: "Anybody" }}>
-        
         {/* Section Heading */}
         <div className="w-full max-w-7xl mb-10">
           <h2 className="text-2xl md:text-3xl tracking-tight">Our approach</h2>
@@ -37,16 +36,17 @@ const Process = () => {
           <div
             key={process.id}
             className="w-full max-w-7xl flex flex-row items-start justify-start gap-6 md:gap-12 px-0 py-4 my-4">
-            
             {/* Title on the Left */}
             <div className="w-1/4 text-sm md:text-sm font-medium">
               {process.title}
             </div>
 
             {/* Description on the Right */}
-            <div className="w-3/4 text-xs md:text-xs leading-[20px] md:leading-[24px] text-gray-600">
+            <div className="w-2/4 text-xs md:text-xs leading-[20px] md:leading-[24px] text-gray-600">
               {process.description.map((desc, descIndex) => (
-                <p key={descIndex} className="mb-2">{desc}</p>
+                <p key={descIndex} className="mb-2">
+                  {desc}
+                </p>
               ))}
             </div>
           </div>
@@ -68,6 +68,15 @@ const Process = () => {
           alt="Our Approach"
           className="w-screen h-auto object-cover"
         />
+
+        {/* About Us Top Section */}
+        <div className="bg-white py-8 text-center pt-10">
+          <h1
+            className="text-3xl font-semibold inline-block border-b-2 border-black pb-2"
+            style={{ fontFamily: "Anybody" }}>
+            About Us
+          </h1>
+        </div>
       </div>
     </>
   );

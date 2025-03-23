@@ -1,5 +1,6 @@
 // src/pages/Workspage.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
 import ContactUs from "../components/home/ContactUs";
 import WorkBg1 from "../assets/Work 1 (2).png";
@@ -34,9 +35,11 @@ const Workspage = () => {
             className="w-full h-auto object-cover"
           />
           <div className="absolute top-10 left-6 md:left-16">
-            <p className="text-white text-xl md:text-3xl tracking-wide border-b border-white inline-block pb-0.5">
-              Minimals
-            </p>
+            <Link to="/project1">
+              <p className="text-white text-xl md:text-3xl tracking-wide border-b border-white inline-block pb-0.5 cursor-pointer hover:opacity-80 transition">
+                Minimals
+              </p>
+            </Link>
           </div>
           <div className="absolute top-10 right-6 md:right-16">
             <p className="text-white text-xl md:text-3xl tracking-wide">01</p>
@@ -82,7 +85,6 @@ const Workspage = () => {
           </div>
           <ContactUs />
         </div>
-       
       </div>
     </>
   );

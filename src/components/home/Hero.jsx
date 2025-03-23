@@ -6,7 +6,7 @@ export default function Hero({ scrollToOurTeam }) {
   return (
     <section className="relative flex flex-col items-start justify-start bg-black text-white min-h-screen ">
       {/* Content Container */}
-      <div className="w-full text-left relative z-10 pb-6">
+      <div className="w-full text-left relative z-10 pb-6 pt-20">
         {/* Secondary Heading with Animation */}
         <div className="overflow-hidden whitespace-nowrap text-[5rem] md:text-[14rem] ">
           <p

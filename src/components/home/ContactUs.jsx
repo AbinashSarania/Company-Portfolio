@@ -1,73 +1,115 @@
 import React from "react";
-import { FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const ContactUs = () => {
   return (
-    <div
-      className="bg-black text-white p-6 md:py-16 md:px-12 lg:px-24"
-      style={{ fontFamily: "Anybody" }}>
-      <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0">
-        {/* Left Section */}
-        <div className="md:w-1/2 space-y-4 md:space-y-6">
-          <h1 className="text-base md:text-lg font-medium mb-4 md:mb-12">
-            We love crafting unforgettable digital experiences, brands, and
-            websites with people like you.
-          </h1>
-          <div className="space-y-2">
-            <h2 className="text-xs font-light">Get in touch</h2>
-            <p className="text-xs md:text-sm">+91 9954 325690</p>
-            <p className="text-xs md:text-sm">Sameshm445@gmail.com</p>
-            <p className="text-xs md:text-sm">
-              Rolling mill, Near Cake Heaven, Bongaigaon, Assam
-            </p>
-          </div>
-          <p className="text-gray-500 text-[10px] mt-6">
-            ©2024 Awesome Inc. All rights reserved.
-          </p>
-        </div>
+    <div className="w-full">
+      
 
-        {/* Right Section */}
-        <div className="md:w-1/2 flex flex-col items-center md:items-start mx-auto md:mx-0 space-y-4 lg:ml-52">
-          {/* Social Media Icons Card */}
-          <div className="bg-gray-900 p-3 rounded-2xl flex justify-between items-center w-full max-w-xs lg:max-w-sm">
-            <span className="text-white text-sm font-medium">Follow Us</span>
-            <div className="flex space-x-3 text-white">
-              <a href="#" className="text-white">
-                <FaTwitter size={18} />
-              </a>
-              <a href="#" className="text-white">
-                <FaInstagram size={18} />
-              </a>
-              <a href="#" className="text-white">
-                <FaEnvelope size={18} />
-              </a>
+      {/* Main Contact Section */}
+      <div
+        className="bg-black text-white p-6 md:py-16 md:px-12 lg:px-24"
+        style={{ fontFamily: "Anybody" }}
+      >
+        <div className="flex flex-col md:flex-row justify-between space-y-12 md:space-y-0 md:space-x-16">
+          {/* Left Section */}
+          <div className="md:w-1/2 space-y-8">
+            <h2 className="text-2xl md:text-3xl font-semibold">
+              Do it once. Do it right.
+            </h2>
+
+            <div className="space-y-2 text-sm">
+              <p>New business:</p>
+              <p className="font-medium">uxify@gmail.com</p>
+            </div>
+
+            {/* Newsletter */}
+            <div className="space-y-4">
+              <p className="text-sm">Sign up for our Newsletter (No Spam)</p>
+              <div className="flex items-center border-b border-gray-500 py-2">
+                <input
+                  className="bg-transparent appearance-none border-none w-full text-white placeholder-gray-400 focus:outline-none text-sm"
+                  type="email"
+                  placeholder="Email"
+                />
+                <FiArrowUpRight className="text-white" />
+              </div>
+
+              {/* Button */}
+              <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-sm flex items-center gap-2 uppercase tracking-wider">
+                REQUEST A QUOTE
+                <FiArrowUpRight />
+              </button>
             </div>
           </div>
 
-          {/* Contact Card */}
-          <div className="bg-gray-800 px-6 py-8 space-y-4 rounded-2xl flex flex-col items-center w-full max-w-xs lg:max-w-sm">
-            <h2
-              className="text-xl font-semibold"
-              style={{ fontFamily: "Anybody" }}>
-              Let's get started
-            </h2>
-            <p
-              className="text-[11px] font-light"
-              style={{ fontFamily: "Anybody" }}>
-              We’d love to hear about your project
-            </p>
-            <button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:px-12 rounded-2xl text-sm"
-              style={{ fontFamily: "Anonymous Pro" }}>
-              Let's Talk <i className="fas fa-arrow-right"></i>
-            </button>
-          </div>
+          {/* Right Section - now responsive for mobile */}
+          <div className="md:w-1/2 w-full flex md:justify-end justify-center">
+            <div className="w-full md:w-3/4 flex flex-col space-y-8 items-end md:items-end items-center">
+              {/* Navigation & Social in a flex */}
+              <div className="flex flex-col sm:flex-row sm:space-x-16 text-sm w-full sm:w-auto">
+                {/* Navbar */}
+                <ul className="space-y-3 text-left">
+                  <li>
+                    <a href="#" className="hover:underline">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:underline">
+                      Work
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:underline">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:underline">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:underline">
+                      Contact
+                    </a>
+                  </li>
 
-          {/* Footer Links */}
-          <div className="text-gray-500 text-[10px] mt-4 flex space-x-3">
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+                  {/* Location */}
+                  <div className="text-sm text-left pt-6">
+                    <p>Ghy, Assam</p>
+                    <p>India</p>
+                  </div>
+                </ul>
+
+                {/* Social Links */}
+                <ul className="space-y-3 text-left pt-8 sm:pt-0">
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:underline flex items-center gap-1"
+                    >
+                      Instagram <FiArrowUpRight />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="hover:underline flex items-center gap-1"
+                    >
+                      LinkedIn <FiArrowUpRight />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Optional Footer */}
+        <div className="mt-12 text-gray-500 text-xs text-center">
+          ©2024 UXify. All rights reserved.
         </div>
       </div>
     </div>

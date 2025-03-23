@@ -33,11 +33,6 @@ const Home = () => {
       {/* Process / Approach Section */}
       <Process />
 
-      {/* Optional Our Team Section */}
-      <div ref={ourTeamRef}>
-        <OurTeam />
-      </div>
-
       {/* Contact Section */}
       <div ref={contactRef}>
         <ContactUs />

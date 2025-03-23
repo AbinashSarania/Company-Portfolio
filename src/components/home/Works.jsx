@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom";
 import Project1 from "../../assets/Project  (1).png";
 import Project2 from "../../assets/Project  (2).png";
 import Companies from "../../assets/Companies worked for.png";
@@ -14,14 +14,14 @@ import Carousel3 from "../../assets/carousel3.png";
 import Carousel4 from "../../assets/carousel4.png";
 
 export default function Works() {
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate();
 
   return (
     <>
       <section className="w-full py-12 md:py-24 px-6 md:px-12 lg:px-24 bg-black text-white">
         <div className="container px-4 md:px-6">
           {/* Top Section: Heading & Projects Count */}
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <h2
                 className="text-8xl tracking-tighter sm:text-4xl md:text-6xl"
@@ -36,12 +36,12 @@ export default function Works() {
             </div>
 
             {/* Right Side - Number & Button */}
-            <div className="flex flex-col items-end pr-10">
+            <div className="flex flex-col items-start md:items-end pr-0 md:pr-10">
               <p className="text-8xl" style={{ fontFamily: "Anybody" }}>
                 13
               </p>
               <button
-                onClick={() => navigate("/works")} // ✅ Navigate on click
+                onClick={() => navigate("/works")}
                 className="mt-4 px-6 py-1 text-md text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300"
                 style={{ fontFamily: "Anybody" }}>
                 Projects Completed
@@ -92,7 +92,10 @@ export default function Works() {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
-          slidesPerView={6}
+          slidesPerView={3} // Default for mobile
+          breakpoints={{
+            768: { slidesPerView: 4 }, // 4 images per view from 768px (tablet/desktop) onwards
+          }}
           loop={true}
           autoplay={{ delay: 0, disableOnInteraction: false }}
           speed={2000}
